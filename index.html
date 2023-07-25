@@ -1,1 +1,89 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.js" integrity="sha512-Mfa0FGPN33LtU+puEaoEn1kAIFJYm2kMsipPbFefhcqz9lLVzxkN/NDFpaPUdmQuisESKXisMit5UkloQ8OtrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Weather Forecast</title>
+  </head>
+
+  <body>
+
+    <div class="card">
+
+      <div class="search">
+        <input type="text" placeholder="Enter City Name" spellcheck="false">
+        <button id="search-btn">
+          <i class="bx bx-search bx-tada-hover"></i>
+        </button>
+      </div>
+
+      <div class="weather">
+
+        <img src="images/clear.png" alt="" class="weather-icon" />
+        <h1 class="status">Clear</h1>
+
+        <div id="temp-details">
+          <div class="ntemp">
+            <h1 class="temp">22<degree>℃</degree></h1>
+            <h2 class="city">New Delhi</h2>
+            <h2 class="feels-like"></h2>
+          </div>
+
+          <div class="minmax">
+            <div class="mintemp">
+              <h2 class="minitemp">18<degree>℃</degree></h2>
+              <h4>Min.</h4>
+            </div>
+
+            <div class="maxtemp">
+              <h2 class="maxitemp">30<degree>℃</degree></h2>
+              <h4>Max</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="details">
+
+          <div class="col">
+            <img src="images/humidity.png" alt="" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <img src="images/wind.png" alt="" />
+            <div>
+              <p class="wind">5 kmph</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+    <!-- Vanilla JS tilt hack -->
+    <script type="text/javascript">
+      
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 5,
+        speed: 7000,
+      });
+
+    </script>
+  
+  </body>
+  
+</html>
