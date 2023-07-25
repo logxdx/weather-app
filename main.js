@@ -5,10 +5,20 @@ const searchbox = document.querySelector(".search input")
 const searchbtn = document.querySelector(".search button")
 const wicon = document.querySelector(".weather-icon")
 
+
 async function checkWeather(city) {
 
     const response = await fetch(apiURL + `&appid=${apiKey}&q=${city}`);
     var data = await response.json();
+
+    if (response.status == 404) {     
+        document.querySelector(".weather").style.display = "none"
+        document.querySelector(".error").style.display = "block"
+
+        setTimeout(() => {
+            document.querySelector(".error").style.display = "none"                    
+        }, 1000);
+    }
 
     console.log(data);
 
@@ -47,10 +57,14 @@ async function checkWeather(city) {
     else if (data.weather[0].main == "Snow") {
         wicon.src = "images/snow.png"
     }
+
+    document.querySelector(".weather").style.display = "block"
+    document.querySelector(".error").style.display = "none"
+
 };
 
 searchbtn.addEventListener("click", () => {
     checkWeather(searchbox.value);
 })
 
-checkWeather()
+checkWeather();

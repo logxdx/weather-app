@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -9,23 +8,22 @@
 }
 
 body {
-    /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
-    background-image: linear-gradient(to right, #ff2525a2 0%, #ffa825a2 70%, #f5d713a2 80%, #FFE53Ba2 100%);
+    background-image: url(https://plus.unsplash.com/premium_photo-1668091148044-056cd744e64a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .card {
     width: 100%;
     max-width: 450px;
-    /* background: linear-gradient(45deg, #340467, #752b9a, #5b548a); */
-    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(100px);
     color: #fff;
     margin: 100px auto 0px;
     border-radius: 30px;
     padding: 40px 35px;
     text-align: center;
-
-    
-    
 }
 
 .search {
@@ -36,8 +34,8 @@ body {
 }
 
 .search input {
-    background-color: hsla(52, 100%, 62%, 0.347);
-    color: #000;
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
     border: 0;
     outline: 0;
     border-radius: 30px;
@@ -47,6 +45,11 @@ body {
     font-size: 20px;
     border-right: 16px;
     text-align: center;
+}
+
+.search input::placeholder {
+    color: black;
+    text-transform: capitalize;
 }
 
 #search-btn {
@@ -111,3 +114,19 @@ degree {
     font-size: 28px;
     margin-top: -6px;
 }
+
+.weather {
+    display: none;
+}
+
+.error {
+    display: none;
+}
+
+.error p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+@media (width < )
