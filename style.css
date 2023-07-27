@@ -8,7 +8,8 @@
 }
 
 body {
-    background-image: url(https://plus.unsplash.com/premium_photo-1668091148044-056cd744e64a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80);
+    background-image: url(https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -17,8 +18,9 @@ body {
 .card {
     width: 100%;
     max-width: 450px;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(100px);
+    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     color: #fff;
     margin: 100px auto 0px;
     border-radius: 30px;
@@ -49,6 +51,7 @@ body {
 
 .search input::placeholder {
     color: black;
+    color: rgb(180, 178, 178);
     text-transform: capitalize;
 }
 
@@ -63,9 +66,19 @@ body {
     cursor: pointer;
 }
 
+@keyframes slide {
+    to {
+        display: block;
+    }
+}
+
 .weather-icon {
     width: 170px;
     margin-top: 30px;
+}
+
+#search-btn i {
+    color: rgb(180, 178, 178);
 }
 
 #temp-details .temp {
@@ -117,6 +130,8 @@ degree {
 
 .weather {
     display: none;
+    transition: 0.5s;
+    animation: slide 1s ease-in-out;
 }
 
 .error {
@@ -128,5 +143,3 @@ degree {
     font-size: 36px;
     margin-top: 40px;
 }
-
-@media (width < )
