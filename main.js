@@ -63,7 +63,7 @@ async function checkWeather(city) {
             wicon.src = "images/snow.png"
         }
 
-        card.style.height = '750px';
+        card.style.height = '720px';
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".weather").classList.add("fade-in");
 
