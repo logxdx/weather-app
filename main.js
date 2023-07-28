@@ -41,7 +41,7 @@ async function checkWeather(city) {
         )}<degree>℃</degree>`;
         document.querySelector(".humidity").innerHTML = `${data.main["humidity"]}%`;
         document.querySelector(".wind").innerHTML = `${data.wind["speed"]} kmph`;
-        document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".city").innerHTML = data.name + ', ' + data.sys.country;
         document.querySelector(".status").innerHTML = data.weather[0].main;
 
         if (data.weather[0].main == "Clouds") {
