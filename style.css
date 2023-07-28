@@ -8,11 +8,7 @@
 }
 
 html {
-    /* background-image: url(https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1600);
-    background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background: #2d0d30;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
 }
 
 .card {

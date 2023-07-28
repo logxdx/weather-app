@@ -14,7 +14,7 @@ async function checkWeather(city) {
 
     if (response.status == 404) {
 
-        card.style.height = '225px';
+        card.style.height = '255px';
         document.querySelector(".weather").style.display = "none";
         document.querySelector(".error").style.display = "block";
         document.querySelector(".error").classList.add("fade-in");
