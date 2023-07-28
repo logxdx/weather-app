@@ -7,17 +7,18 @@
     font-family: 'Rubik', sans-serif;
 }
 
-body {
-    background-image: url(https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1600);
+html {
+    /* background-image: url(https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1600);
     background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-size: cover; */
+    background: #2d0d30;
 }
 
 .card {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
+    height: 135px;
     background: rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -26,10 +27,12 @@ body {
     border-radius: 30px;
     padding: 40px 35px;
     text-align: center;
+    transition: 0.5s ease;
 }
 
 .search {
     width: 100%;
+    height: min-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,12 +43,11 @@ body {
     color: #fff;
     border: 0;
     outline: 0;
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 10px 25px;
     height: 60px;
     flex: 1;
     font-size: 20px;
-    border-right: 16px;
     text-align: center;
 }
 
@@ -60,15 +62,27 @@ body {
     align-items: center;
     font-size: 50px;
     transform: translateY(10%);
-    padding-left: 10px;
+    padding-left: 35px;
     border: 0;
     background-color: transparent;
     cursor: pointer;
 }
 
+.weather {
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.fade-in {
+    animation: 0.5s slide forwards;
+    animation-delay: 0.1s;
+}
+
 @keyframes slide {
     to {
-        display: block;
+        scale: 1;
+        opacity: 1;
     }
 }
 
@@ -128,18 +142,15 @@ degree {
     margin-top: -6px;
 }
 
-.weather {
-    display: none;
-    transition: 0.5s;
-    animation: slide 1s ease-in-out;
-}
-
 .error {
     display: none;
+    opacity: 0;
+    scale: 0;
 }
 
 .error p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 36px;
     margin-top: 40px;
+    transition: 0.5s ease;
 }

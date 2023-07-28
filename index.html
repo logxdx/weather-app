@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,12 +9,11 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.js" integrity="sha512-Mfa0FGPN33LtU+puEaoEn1kAIFJYm2kMsipPbFefhcqz9lLVzxkN/NDFpaPUdmQuisESKXisMit5UkloQ8OtrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Weather Forecast</title>
   </head>
 
   <body>
-
+<div class="container">
     <div class="card">
 
       <div class="search">
@@ -24,7 +24,7 @@
       </div>
 
       <div class="error">
-        <p>Invalid City Name</p>
+        <p class="bx-flashing-hover">Invalid City Name</p>
       </div>
 
       <div class="weather">
@@ -75,18 +75,8 @@
       </div>
 
     </div>
-
+</div>
     <script src="main.js"></script>
-
-    <!-- Vanilla JS tilt hack -->
-    <script type="text/javascript">
-      
-      VanillaTilt.init(document.querySelectorAll(".card"), {
-        max: 5,
-        speed: 7000,
-      });
-
-    </script>
   
   </body>
   
