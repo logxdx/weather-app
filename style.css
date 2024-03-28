@@ -235,12 +235,12 @@ degree {
     }
 
     .col img {
-        width: 20px;
+        width: 30px;
     }
 
     .humidity,
     .wind {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: -6px;
     }
 
