@@ -1,83 +1,76 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css"
-      rel="stylesheet"
-    />
-    <title>Weather Forecast</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.css" rel="stylesheet" />
+        <title>Weather Forecast</title>
+    </head>
 
-  <body>
-<div class="container">
-    <div class="card">
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="search">
+                    <input
+                        type="text"
+                        placeholder="Enter City"
+                        spellcheck="false"
+                        aria-autocomplete="none"
+                    />
+                    <button id="search-btn">
+                        <i class="bx bx-search bx-tada-hover"></i>
+                    </button>
+                </div>
 
-      <div class="search">
-        <input type="text" placeholder="Enter City Name" spellcheck="false" aria-autocomplete="none">
-        <button id="search-btn">
-          <i class="bx bx-search bx-tada-hover"></i>
-        </button>
-      </div>
+                <div class="error">
+                    <p class="bx-flashing-hover">Invalid City Name</p>
+                </div>
 
-      <div class="error">
-        <p class="bx-flashing-hover">Invalid City Name</p>
-      </div>
+                <div class="weather">
+                    <img src="images/clear.png" alt="" class="weather-icon" />
+                    <h1 class="status">Clear</h1>
 
-      <div class="weather">
+                    <div id="temp-details">
+                        <div class="ntemp">
+                            <h1 class="temp">22<degree>℃</degree></h1>
+                            <h2 class="city">New Delhi</h2>
+                        </div>
 
-        <img src="images/clear.png" alt="" class="weather-icon" />
-        <h1 class="status">Clear</h1>
+                        <div class="minmax">
+                            <div class="mintemp">
+                                <h2 class="minitemp">18<degree>℃</degree></h2>
+                                <h4>Min Temp</h4>
+                            </div>
 
-        <div id="temp-details">
-          <div class="ntemp">
-            <h1 class="temp">22<degree>℃</degree></h1>
-            <h2 class="city">New Delhi</h2>
-            <h2 class="feels-like"></h2>
-          </div>
+                            <div class="maxtemp">
+                                <h2 class="maxitemp">30<degree>℃</degree></h2>
+                                <h4>Max Temp</h4>
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="minmax">
-            <div class="mintemp">
-              <h2 class="minitemp">18<degree>℃</degree></h2>
-              <h4>Min Temp</h4>
+                    <div class="details">
+                        <div class="col">
+                            <img src="images/humidity.png" alt="" />
+                            <div>
+                                <p class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <img src="images/wind.png" alt="" />
+                            <div>
+                                <p class="wind">5 kmph</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="maxtemp">
-              <h2 class="maxitemp">30<degree>℃</degree></h2>
-              <h4>Max Temp</h4>
-            </div>
-          </div>
         </div>
-
-        <div class="details">
-
-          <div class="col">
-            <img src="images/humidity.png" alt="" />
-            <div>
-              <p class="humidity">50%</p>
-              <p>Humidity</p>
-            </div>
-          </div>
-
-          <div class="col">
-            <img src="images/wind.png" alt="" />
-            <div>
-              <p class="wind">5 kmph</p>
-              <p>Wind Speed</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-</div>
-    <script src="main.js"></script>
-  
-  </body>
-  
+        <script src="main.js"></script>
+    </body>
 </html>

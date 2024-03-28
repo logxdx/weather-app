@@ -14,22 +14,21 @@ async function checkWeather(city) {
 
     if (response.status == 404) {
 
-        card.style.height = '255px';
+        card.style.height = '250px';
         document.querySelector(".weather").style.display = "none";
         document.querySelector(".error").style.display = "block";
         document.querySelector(".error").classList.add("fade-in");
+        console.log(data);
     }
-    
+
     else {
-        
-        document.querySelector(".error").style.display = "none"
-        document.querySelector(".error").classList.remove("fade-in");
 
         console.log(data);
 
-        document.querySelector(".feels-like").innerHTML = `feels like ${Math.round(
-            data.main["feels_like"]
-        )}<degree>℃</degree>`;
+        document.querySelector(".error").style.display = "none"
+        document.querySelector(".error").classList.remove("fade-in");
+
+
         document.querySelector(".temp").innerHTML = `${Math.round(
             data.main["temp"]
         )}<degree>℃</degree>`;
@@ -63,9 +62,9 @@ async function checkWeather(city) {
             wicon.src = "images/snow.png"
         }
 
-        card.style.height = '720px';
-        document.querySelector(".weather").style.display = "block";
+        card.style.height = 'min-content';
         document.querySelector(".weather").classList.add("fade-in");
+        document.querySelector(".weather").style.height = "min-content";
 
     }
 
