@@ -216,8 +216,8 @@ degree {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem 1rem;
-        font-size: 1.5rem;
+        padding: 2em 1em;
+        font-size: 1.5em;
     }
 
     .details {
